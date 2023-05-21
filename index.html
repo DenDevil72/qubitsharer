@@ -2,36 +2,17 @@
 <html lang="en">
    <head>
       <meta charset="utf-8">
-      <title>Download Google Drive Files Securely Qubit</title>
-      <style>
-        /* CSS styles for the navbar */
-        .navbar {
-            background-color: #333;
-            overflow: hidden;
-        }
-        
-        /* CSS styles for the navbar links */
-        .navbar a {
-            float: left;
-            color: white;
-            text-align: center;
-            padding: 2px 2px;
-            text-decoration: none;
-            font-size: 28px;
-            font-family: cursive;
-        }
-    </style>
+      <title>Download Google Drive Files Securely - QbiitSharer</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <script src="https://geolocation.zindex.eu.org/api.js"></script>
-      <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "0067491d72914d45ac80a74b1278147f"}'></script><!-- End Cloudflare Web Analytics -->
       <link rel="icon" href="https://publiclinks.hashhackers.com/favicon.png">
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4/dist/materia/bootstrap.min.css">
       <script src="https://cdn.jsdelivr.net/npm/crypto-js@4.1.1/crypto-js.js" integrity="sha256-8L3yX9qPmvWSDIIHB3WGTH4RZusxVA0DDmuAo4LjnOE=" crossorigin="anonymous"></script>
       <link rel="stylesheet" href="https://cdn.zindex.eu.org/publiclinks/style.min.css?v=6.5">
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>   </head>
    <body>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-fixed-top navbar">
-         <a class="navbar-brand" href="/">QubitQ Sharer</a>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-fixed-top">
+         <a class="navbar-brand" href="/"><img border="0" alt="Qbitsharer"></a>
       </nav>
       <div class="container">
       <div class="row">
@@ -55,81 +36,54 @@
   </div>
 </div>
             <center>
-
                <h4>Download and Share</h4>
-
                <h4>Google Drive Links</h4>
-
                <p class="mt-3">You can get direct Download links, Copy and Share Public Google Drive Files. (for Private Files, check more details in Learn More Section)</p>
-
                <div class="loading" id="spinner" style="display:none;">Loading&#8230;</div>
-
                <div class="form-group align-items-center">
-
                   <p class="col-12 col-md-8" id="status"></p>
-
                   <div class="row justify-content-center file">
-
                      <div class="col-12 col-md-8"> <input id="driveid" type="text" class="form-control" placeholder="Enter GDrive Link" value="" required></div>
-
                      <div class="col-12 col-md-8"> <button id="encrypt" style="margin-top: 5px;" class="btn btn-primary btn-block">Convert</button></div>
-
                   </div>
-
                   <br>
-
                   <div class="row justify-content-center hide" style="display:none;">
-
                      <br>
-
                      <h4><label for="exampleInputEmail1">Download Link</label></h4>
-
                      <div class="col-12 col-md-8"> <input id="result" type="text" class="form-control" placeholder="Temporary Link Here" value="" readonly></div>
-
                      <div class="col-12 col-md-8"> <button id="download" style="margin-top: 5px;" class="btn btn-primary btn-block">Download</button></div>
-
                      <div class="col-12 col-md-8"> <button id="copybuttonid" style="margin-top: 5px;" onclick="copyFunction('result', 'copybuttonid')" onmouseout="outFunc('copybuttonid')" class="btn btn-success btn-block">Copy Link</button></div>
-
                      <div class="col-12 col-md-8"> <button id="shortlinktempurl" style="display:none; margin-top: 5px;" class="btn btn-danger btn-block">Shorten This URL</button></div>
-
                   </div>
-
                      <br>
-
                   <div class="row justify-content-center hide" id="folder" style="display:none;"></div>
-
                      <div class="row justify-content-center hide" style="display:none;">
-
                      <br>
-
                      <h4><label for="exampleInputEmail1">Permanent Link</label></h4>
-
                      <div class="col-12 col-md-8"> <input id="publicresult" type="text" class="form-control" placeholder="Permanent Link Here" value="" readonly></div>
-
                      <div class="col-12 col-md-8"> <button id="publiccopybuttonid" style="margin-top: 5px;" onclick="copyFunction('publicresult', 'publiccopybuttonid')" onmouseout="outFunc('publiccopybuttonid')" class="btn btn-success btn-block">Copy Permanent Link</button></div>
-
                      <div class="col-12 col-md-8"> <button id="shortlinkpermanenturl" style="display:none; margin-top: 5px;" class="btn btn-danger btn-block">Shorten This URL</button></div>
-
                      </div><br>
-
                      <div class="row justify-content-center" id="copy" style="display:none;">
-
                      <br>
-
                      <h4><label for="exampleInputEmail1">Copy File to Own Drive</label></h4>
-
                      <div class="col-12 col-md-8"> <input id="user_folder_id" type="text" class="form-control" placeholder="Enter Your Folder ID to Copy this File" value="" required></div>
-
                      <div class="col-12 col-md-8"> <button id="copy_file" style="margin-top: 5px;" class="btn btn-danger btn-block">Copy File</button></div>
-
                      </div>
                     <p class="mt-3">Once Generated, Sharable links are valid for 24 hours, while Permanent Links are valid for as long as that particular file is available.</p>
+                    <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fpubliclinks.hashhackers.com&amp;count_bg=%2379C83D&amp;title_bg=%23555555&amp;icon=&amp;icon_color=%23E7E7E7&amp;title=hits&amp;edge_flat=false">
+                  </div>
             </center>
             </div>
             <div class="card-body">
             <center>
             <h4 onclick="showNote()">Learn More</h4>
-            <pre id="note" style="display:none;">None</pre>
+            <pre id="note" style="display:none;">You can use private file links too, to use them share the file with email address system@zindex.eu.org and then convert the links.
+            This website is powered by Hash Hackers and Bhadoo Cloud.
+            Links are valid for 24 hours to prevent Abuse.
+            The Backend is using 100 Servers (will increase in future) and 5000 Service Accounts (for Private Links),
+            Integrated to provide high speed and stability.
+            API is removed to prevent abuse.</pre>
             </center>
             </div>
             </div>
@@ -138,7 +92,8 @@
       </div>
       <footer class="footer">
          <div class="container">
-            <div class="text-muted">QubitQ (Encrypted and Secure)</div>
+            <div class="text-muted">Made with ❤️ by</div>
+            <div class="text-muted">Version: <b>6.8</b> (Encrypted and Secure)/div>
          </div>
       </footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.js" integrity="sha256-FaAOdYdEAZkWmbgMVjrb7kq4BJ46vaUUiDJ3t7O+oT8=" crossorigin="anonymous"></script>
